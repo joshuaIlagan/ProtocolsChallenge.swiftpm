@@ -2,7 +2,6 @@ import SwiftUI
 
 struct PresistenceView: View {
     var body: some View {
-        HeaderView()
         NavigationStack {
             Text("User Defaults")
                 .font(.largeTitle)
@@ -31,6 +30,5 @@ struct PresistenceView: View {
             }
         }
         .foregroundColor(.blue)
-        FooterView()
     }
 }

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CoinView: View {
+struct ProtocolsView: View {
     //MARK: Stretch #2 - Part II
     
     let coins = [
@@ -12,8 +12,6 @@ struct CoinView: View {
     
     
     var body: some View {
-        HeaderView()
-        Spacer()
         Text("MVP Works")
         //MARK: MVP - Part II
             .borderedCaption()
@@ -41,7 +39,5 @@ struct CoinView: View {
         
         
         
-        Spacer()
-        FooterView()
     }
 }
