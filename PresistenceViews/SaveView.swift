@@ -11,7 +11,7 @@ struct SaveView: View {
    
     
     
-    
+    @State var number1: Int?
     @State var number2: Int?
     
     @State var url2: URL?
@@ -26,28 +26,30 @@ struct SaveView: View {
     
     var body: some View {
         VStack {
-            Group {
-                
-                TitleView(name: "MVP")
-                HStack {
-                    //TODO: MVP
-//                    TextField("Integer #1", value: $number1, format: .number)
-                    TextField("Integer #2", value: $number2, format: .number)
-                }
-                .textFieldStyle(.roundedBorder)
-                Button("Save") {
-                    //MARK: MVP - Part II
-                    
-                    
-                    
-                    
-                    
-                }
-                .frame(width: 200, height: 50)
-                .foregroundColor(.white)
-                .background(.blue)
-                .clipShape(Capsule())
-            }
+            //MARK: Diagnostic Error
+//            Group {
+//
+//                TitleView(name: "MVP")
+//                HStack {
+//                    let defaults = UserDefaults.standard
+//                    defaults.set(number1, forKey: "Number1")
+//                   TextField("Integer #1", value: $number1, format: .number)
+//                    TextField("Integer #2", value: $number2, format: .number)
+//                }
+//                .textFieldStyle(.roundedBorder)
+//                Button("Save") {
+//                    //MARK: MVP - Part II
+//
+//
+//
+//
+//
+//                }
+//                .frame(width: 200, height: 50)
+//                .foregroundColor(.white)
+//                .background(.blue)
+//                .clipShape(Capsule())
+//            }
             
             Group {
                 TitleView(name: "Stretch #1")
