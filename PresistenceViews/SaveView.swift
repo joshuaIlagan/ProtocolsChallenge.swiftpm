@@ -5,13 +5,14 @@ struct SaveView: View {
     //MARK: MVP - Part I
     
     
-    
+    @AppStorage("number1") var number1: Int = 0
     
     //MARK: Stretch #1 - Part I
    
     
+    @AppStorage("url1") var url1: URL?
     
-    @State var number1: Int?
+    
     @State var number2: Int?
     
     @State var url2: URL?
@@ -24,41 +25,41 @@ struct SaveView: View {
     @State var age: Int?
     @State var phone: String = ""
     
+    
+    
     var body: some View {
+        
+        
+        
         VStack {
             //MARK: Diagnostic Error
-//            Group {
-//
-//                TitleView(name: "MVP")
-//                HStack {
-//                    let defaults = UserDefaults.standard
-//                    defaults.set(number1, forKey: "Number1")
-//                   TextField("Integer #1", value: $number1, format: .number)
-//                    TextField("Integer #2", value: $number2, format: .number)
-//                }
-//                .textFieldStyle(.roundedBorder)
-//                Button("Save") {
-//                    //MARK: MVP - Part II
-//
-//
-//
-//
-//
-//                }
-//                .frame(width: 200, height: 50)
-//                .foregroundColor(.white)
-//                .background(.blue)
-//                .clipShape(Capsule())
-//            }
+            Group {
+
+                TitleView(name: "MVP")
+                HStack {
+                   TextField("Integer #1", value: $number1, format: .number)
+                    TextField("Integer #2", value: $number2, format: .number)
+                }
+                .textFieldStyle(.roundedBorder)
+                Button("Save") {
+                    //MARK: MVP - Part II
+
+                    UserDefaults.standard.set(number2, forKey: "number2")
+
+                }
+                .frame(width: 200, height: 50)
+                .foregroundColor(.white)
+                .background(.blue)
+                .clipShape(Capsule())
+            }
             
             Group {
                 TitleView(name: "Stretch #1")
                 VStack {
-                    //TODO: Stretch #1
-//                    TextField("Enter URL #1", text: Binding(
-//                        get: { url1?.absoluteString ?? "" },
-//                        set: { url1 = URL(string: $0) }
-//                    ))
+                    TextField("Enter URL #1", text: Binding(
+                        get: { url1?.absoluteString ?? "" },
+                        set: { url1 = URL(string: $0) }
+                    ))
                     TextField("Enter URL #2", text: Binding(
                         get: { url2?.absoluteString ?? "" },
                         set: { url2 = URL(string: $0) }
@@ -69,9 +70,9 @@ struct SaveView: View {
                 .textFieldStyle(.roundedBorder)
                 Button("Save") {
                     //MARK: Stretch #1 - Part II
-                   
+
                     
-                    
+                    UserDefaults.standard.set(url2, forKey: "url2")
                     
                     
                 }
@@ -94,7 +95,7 @@ struct SaveView: View {
                 
                 Button("Save") {
                     //MARK: Stretch #2 - Part I
-                    
+
 
 
                     
@@ -118,7 +119,7 @@ struct SaveView: View {
                     //MARK: Stretch #3 - Part II
                     
                     
-                    
+
                     
                     
                 }
