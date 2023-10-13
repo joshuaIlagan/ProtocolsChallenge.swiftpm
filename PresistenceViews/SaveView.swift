@@ -37,6 +37,9 @@ struct SaveView: View {
 
                 TitleView(name: "MVP")
                 HStack {
+                    // MARK: This is where there error was.
+//                    let defaults = UserDefaults.standard
+//                    defaults.set(number1, forKey: "Number1")
                    TextField("Integer #1", value: $number1, format: .number)
                     TextField("Integer #2", value: $number2, format: .number)
                 }
