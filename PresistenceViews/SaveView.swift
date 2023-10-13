@@ -24,40 +24,45 @@ struct SaveView: View {
     @State var age: Int?
     @State var phone: String = ""
     
+    
+    
     var body: some View {
+        
+        
+        
         VStack {
             //MARK: Diagnostic Error
-//            Group {
-//
-//                TitleView(name: "MVP")
-//                HStack {
+            Group {
+
+                TitleView(name: "MVP")
+                HStack {
+                    // MARK: This is where there error was.
 //                    let defaults = UserDefaults.standard
 //                    defaults.set(number1, forKey: "Number1")
-//                   TextField("Integer #1", value: $number1, format: .number)
-//                    TextField("Integer #2", value: $number2, format: .number)
-//                }
-//                .textFieldStyle(.roundedBorder)
-//                Button("Save") {
-//                    //MARK: MVP - Part II
-//
-//
-//
-//
-//
-//                }
-//                .frame(width: 200, height: 50)
-//                .foregroundColor(.white)
-//                .background(.blue)
-//                .clipShape(Capsule())
-//            }
+                   TextField("Integer #1", value: $number1, format: .number)
+                    TextField("Integer #2", value: $number2, format: .number)
+                }
+                .textFieldStyle(.roundedBorder)
+                Button("Save") {
+                    //MARK: MVP - Part II
+
+
+
+
+                }
+                .frame(width: 200, height: 50)
+                .foregroundColor(.white)
+                .background(.blue)
+                .clipShape(Capsule())
+            }
             
             Group {
                 TitleView(name: "Stretch #1")
                 VStack {
                     //TODO: Stretch #1
 //                    TextField("Enter URL #1", text: Binding(
-//                        get: { url1?.absoluteString ?? "" },
-//                        set: { url1 = URL(string: $0) }
+//                        get: { url2?.absoluteString ?? "" },
+//                        set: { url2 = URL(string: $0) }
 //                    ))
                     TextField("Enter URL #2", text: Binding(
                         get: { url2?.absoluteString ?? "" },
@@ -69,7 +74,7 @@ struct SaveView: View {
                 .textFieldStyle(.roundedBorder)
                 Button("Save") {
                     //MARK: Stretch #1 - Part II
-                   
+
                     
                     
                     
@@ -94,7 +99,7 @@ struct SaveView: View {
                 
                 Button("Save") {
                     //MARK: Stretch #2 - Part I
-                    
+
 
 
                     
@@ -118,7 +123,7 @@ struct SaveView: View {
                     //MARK: Stretch #3 - Part II
                     
                     
-                    
+
                     
                     
                 }
